@@ -30,6 +30,10 @@
     </style>
   </head>
   <body>
+    <!-- 
+      Q2: Sorted the user info and gender radio buttons into separate groupings for clarity; one is for text input, one is selecting.
+      Q2: Added legends to distinguish each grouping.
+     -->
     <form>
       <h1>Feedback Form</h1>
       <fieldset>
@@ -43,23 +47,30 @@
             required
             aria-required="true"
           />
+          <!-- 
+                - Added for= attribute to tie label to the input so screen readers read the label on input hover
+                - Added required and aria-required element for form validation & accessibility for screen readers
+              -->
         </div>
         <div class="control">
           <label id="bioLabel" for="biography"
             >Biography <span class="required">*</span>
           </label>
-          <span>
-            <textarea
-              id="biography"
-              name="biography"
-              aria-labelledby="bioLabel"
-              type="text"
-              aria-describedby="bioDesc"
-              required
-              aria-required="true"
-            ></textarea>
-            <p id="bioDesc">Include examples on your skills in JavaScript.</p>
-          </span>
+          <textarea
+            id="biography"
+            name="biography"
+            aria-labelledby="bioLabel"
+            type="text"
+            aria-describedby="bioDesc"
+            required
+            aria-required="true"
+          ></textarea>
+          <p id="bioDesc">Include examples on your skills in JavaScript.</p>
+          <!-- 
+                - Added for= attribute to tie label to the input so screen readers read the label on input hover
+                - Added required and aria-required element for form validation & accessibility for screen readers
+                - Added form instruction paragraph element that the input reads on focus through the aria-describedby attribute
+                -->
           <!-- <textarea id="biography" name="biography" type="text"></textarea>
         <span>Include examples on your skills in JavaScript.</span> -->
         </div>
