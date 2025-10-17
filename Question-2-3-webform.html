@@ -31,8 +31,9 @@
   </head>
   <body>
     <!-- 
-      Q2: Sorted the user info and gender radio buttons into separate groupings for clarity; one is for text input, one is selecting.
-      Q2: Added legends to distinguish each grouping.
+      Sorted the user info and gender radio buttons into separate form groupings for clarity; one is for text input, one is selecting.
+      Added legends to distinguish each grouping.
+      Ensured that every input is required when validating.
      -->
     <form>
       <h1>Feedback Form</h1>
@@ -67,12 +68,11 @@
           ></textarea>
           <p id="bioDesc">Include examples on your skills in JavaScript.</p>
           <!-- 
-                - Added for= attribute to tie label to the input so screen readers read the label on input hover
-                - Added required and aria-required element for form validation & accessibility for screen readers
-                - Added form instruction paragraph element that the input reads on focus through the aria-describedby attribute
-                -->
-          <!-- <textarea id="biography" name="biography" type="text"></textarea>
-        <span>Include examples on your skills in JavaScript.</span> -->
+            - Added for= attribute to tie label to the input so screen readers read the label on input hover
+            - Added required and aria-required element for form validation & accessibility for screen readers
+            - Added form instruction paragraph element that the input reads on focus through the aria-describedby attribute
+            - Added asterisk for visual understanding that an input choice is required
+            -->
         </div>
       </fieldset>
       <fieldset>
@@ -92,6 +92,11 @@
           /><label for="gender_female">Female</label>
         </div>
       </fieldset>
+      <!-- 
+          - Added for= attribute to tie each of the gender radio labels to their respective inputs so screen readers read the label on input hover
+          - Added required and aria-required element to one radio input (which will apply to all of them grouped together) for form validation & accessibility for screen readers
+          - Added asterisk for visual understanding that an input choice is required. 
+      -->
       <div class="control">
         <input
           id="accept_agbs"
@@ -104,6 +109,11 @@
           >I accept the terms and conditions
           <span class="required">*</span></label
         >
+        <!-- 
+          - Added for= attribute to tie the T&C label to the checkbox input so screen readers read the label on input hover
+          - Added required and aria-required element to the checkbox input for form validation & accessibility for screen readers
+          - Added asterisk for visual understanding that the input is required
+        -->
       </div>
       <div class="control">
         <input name="validate" type="hidden" value="1" /><input
