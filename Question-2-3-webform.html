@@ -94,7 +94,14 @@
       <fieldset>
         <legend>Gender <span class="required">*</span></legend>
         <div class="control">
-          <input id="gender_male" name="gender" type="radio" value="male" />
+          <input
+            id="gender_male"
+            name="gender"
+            type="radio"
+            value="male"
+            required
+            aria-required="true"
+          />
           <label for="gender_male">Male</label>
         </div>
         <div class="control">
