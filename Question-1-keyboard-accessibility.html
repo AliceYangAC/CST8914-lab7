@@ -23,7 +23,7 @@
       a {
         color: #006b3a;
       }
-      /* Q1: Removed the outline: none to restore focus to links in the page*/
+      /* Explanation: Removed the outline: none to restore focus to links in the page*/
       /* main a{
         outline: none;
       } */
@@ -204,7 +204,7 @@
           <a href="#">Home</a>
           <a href="#">Politics</a>
           <a href="#">Business</a>
-          <!-- Q1: Removed tabindex="-1" to restore keyboard focus behavior to the Business link-->
+          <!-- Explanation: Removed tabindex="-1" to restore keyboard focus behavior to the Business link-->
           <a href="#">Entertainment</a>
           <a href="#">Sports</a>
           <a href="#" class="btn-search pull-right"
@@ -246,7 +246,7 @@
         <div class="column">
           <div class="tier-header">
             <h2>In the news</h2>
-            <!-- Q1: Removed tabindex="0" since a heading does not need to be focusable as it is a static element -->
+            <!-- Explanation: Removed tabindex="0" since a heading does not need to be focusable as it is a static element that does not serve to anchor the user from a pop up. -->
           </div>
           <article>
             <h3 class="headline">
@@ -255,7 +255,7 @@
             </h3>
             <p>
               <b><a href="#">Read More</a></b>
-              <!-- Q1: Removed tabindex="1" because it is not necessary to achieve logical focus order-->
+              <!-- Explanation: Removed tabindex="1" because it is not necessary to achieve logical focus order-->
             </p>
             <img
               src="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/02-dom-order/images/bee.jpg?raw=true"
@@ -333,12 +333,12 @@
       </div>
     </main>
     <footer class="newsletter">
-      <!-- Q1: Moved the 'join our newsletter' footer to the bottom to fix the focus order logic-->
+      <!-- Explanation: Moved the 'join our newsletter' footer to the bottom to fix the focus order logic-->
       <div class="container">
         <h3>Like the Funion? Consider joining our newsletter!</h3>
         <input type="text" />
         <button type="button" onclick="getClick()">Sign up</button>
-        <!-- Q1: Changed inline Javascript event to onclick and renamed the function to logically match, so that the focus order is not disruptive -->
+        <!-- Explanation: Changed inline Javascript event to onclick and renamed the function to logically match, so that the focus order is not disruptive to a screen reader user. -->
       </div>
     </footer>
     <script>
